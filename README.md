@@ -1,4 +1,4 @@
-# setTimeout and setInterval in golang
+# setTimeout and setInterval in golang
 
 Remember to be always thread safe.
 
@@ -6,13 +6,15 @@ Remember to be always thread safe.
 
 ```go
 
-tm := setTimeout(func () {
+import "github.com/giuseppesalvo/tm-go"
+
+timeout := tm.setTimeout(func () {
 	
 	fmt.Print("fired!")
 
 }, 500) // Milliseconds
 
-clearTimeout(tm)
+tm.clearTimeout(timeout)
 
 ```
 
@@ -32,13 +34,15 @@ type Timeout struct {
 
 ```go
 
-tm := setInterval(func () {
+import "github.com/giuseppesalvo/tm-go"
+
+interval := tm.setInterval(func () {
 	
 	fmt.Print("tick!")
 
 }, 500) // Milliseconds
 
-clearInterval(tm)
+tm.clearInterval(interval)
 
 ```
 
