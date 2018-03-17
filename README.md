@@ -8,13 +8,13 @@ Remember to be always thread safe.
 
 import "github.com/giuseppesalvo/tm-go"
 
-timeout := tm.setTimeout(func () {
+timeout := tm.SetTimeout(func () {
     
     fmt.Print("fired!")
 
 }, 500) // Milliseconds
 
-tm.clearTimeout(timeout)
+tm.ClearTimeout(timeout)
 
 ```
 
@@ -36,13 +36,13 @@ type Timeout struct {
 
 import "github.com/giuseppesalvo/tm-go"
 
-interval := tm.setInterval(func () {
+interval := tm.SetInterval(func () {
     
     fmt.Print("tick!")
 
 }, 500) // Milliseconds
 
-tm.clearInterval(interval)
+tm.ClearInterval(interval)
 
 ```
 
