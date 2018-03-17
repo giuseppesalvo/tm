@@ -9,8 +9,8 @@ Remember to be always thread safe.
 import "github.com/giuseppesalvo/tm-go"
 
 timeout := tm.setTimeout(func () {
-	
-	fmt.Print("fired!")
+    
+    fmt.Print("fired!")
 
 }, 500) // Milliseconds
 
@@ -23,8 +23,8 @@ tm.clearTimeout(timeout)
 ```go
 
 type Timeout struct {
-	Timer *time.Timer
-	Fired bool
+    Timer *time.Timer
+    Fired bool
 }
 
 ```
@@ -37,8 +37,8 @@ type Timeout struct {
 import "github.com/giuseppesalvo/tm-go"
 
 interval := tm.setInterval(func () {
-	
-	fmt.Print("tick!")
+    
+    fmt.Print("tick!")
 
 }, 500) // Milliseconds
 
@@ -51,8 +51,8 @@ tm.clearInterval(interval)
 ```go
 
 type Interval struct {
-	Ticker *time.Ticker
-	Running bool
+    Ticker *time.Ticker
+    Running bool
 }
 
 ```

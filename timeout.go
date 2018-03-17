@@ -14,7 +14,7 @@ func setTimeout(callback func(), delay time.Duration) *Timeout {
 	}
 
 	go func() {
-		<- timeout.Timer.C
+		<-timeout.Timer.C
 		callback()
 		timeout.Fired = true
 	}()
@@ -22,8 +22,8 @@ func setTimeout(callback func(), delay time.Duration) *Timeout {
 	return timeout
 }
 
-func clearTimeout( timeout *Timeout ) {
-	if ! timeout.Fired {
+func clearTimeout(timeout *Timeout) {
+	if !timeout.Fired {
 		timeout.Timer.Stop()
 	}
 }
