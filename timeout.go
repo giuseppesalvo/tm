@@ -7,7 +7,7 @@ type Timeout struct {
 	Fired bool
 }
 
-func setTimeout(callback func(), delay time.Duration) *Timeout {
+func SetTimeout(callback func(), delay time.Duration) *Timeout {
 	timeout := &Timeout{
 		Timer: time.NewTimer(time.Millisecond * delay),
 		Fired: false,
@@ -22,7 +22,7 @@ func setTimeout(callback func(), delay time.Duration) *Timeout {
 	return timeout
 }
 
-func clearTimeout(timeout *Timeout) {
+func ClearTimeout(timeout *Timeout) {
 	if !timeout.Fired {
 		timeout.Timer.Stop()
 	}

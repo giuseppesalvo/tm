@@ -7,7 +7,7 @@ type Interval struct {
 	Running bool
 }
 
-func setInterval(callback func(), delay time.Duration) *Interval {
+func SetInterval(callback func(), delay time.Duration) *Interval {
 
 	interval := &Interval{
 		Ticker:  time.NewTicker(time.Millisecond * delay),
@@ -23,7 +23,7 @@ func setInterval(callback func(), delay time.Duration) *Interval {
 	return interval
 }
 
-func clearInterval(interval *Interval) {
+func ClearInterval(interval *Interval) {
 	if interval.Running {
 		interval.Ticker.Stop()
 		interval.Running = false
