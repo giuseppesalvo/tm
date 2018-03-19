@@ -8,7 +8,7 @@ import "github.com/giuseppesalvo/tm-go"
 
 timeout := tm.SetTimeout(func () {
     
-    fmt.Print("fired!")
+    fmt.Println("fired!")
 
 }, 500) // Milliseconds
 
@@ -36,7 +36,7 @@ import "github.com/giuseppesalvo/tm-go"
 
 interval := tm.SetInterval(func () {
     
-    fmt.Print("tick!")
+    fmt.Println("tick!")
 
 }, 500) // Milliseconds
 
