@@ -4,7 +4,7 @@
 
 ```go
 
-import "github.com/giuseppesalvo/tm-go"
+import "github.com/giuseppesalvo/tm"
 
 timeout := tm.SetTimeout(func () {
     
