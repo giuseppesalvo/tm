@@ -23,7 +23,7 @@ func SetTimeout(callback func(), delay time.Duration) *Timeout {
 }
 
 func ClearTimeout(timeout *Timeout) {
-	if !timeout.Fired {
+	if timeout != nil && !timeout.Fired {
 		timeout.Timer.Stop()
 	}
 }

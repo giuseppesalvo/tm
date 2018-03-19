@@ -24,7 +24,7 @@ func SetInterval(callback func(), delay time.Duration) *Interval {
 }
 
 func ClearInterval(interval *Interval) {
-	if interval.Running {
+	if interval != nil && interval.Running {
 		interval.Ticker.Stop()
 		interval.Running = false
 	}
