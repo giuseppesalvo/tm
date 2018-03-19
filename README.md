@@ -1,7 +1,5 @@
 # setTimeout and setInterval in golang
 
-Remember to be always thread safe.
-
 ## setInterval
 
 ```go
@@ -56,3 +54,5 @@ type Interval struct {
 }
 
 ```
+
+Remember to be always thread safe.
